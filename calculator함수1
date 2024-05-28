@@ -1,0 +1,64 @@
+#include<stdio.h>
+int plus(int v1, int v2)
+{
+	int result;
+	result = v1 + v2;
+	return result;
+}
+int minus(int v1, int v2)
+{
+	int result;
+	result = v1 - v2;
+	return result;
+}
+int multiplication(int v1, int v2)
+{
+	int result;
+	result = v1 * v2;
+	return result;
+}
+int division(int v1, int v2)
+{
+	int result;
+	result = v1 / v2;
+	return result;
+}
+int rest(int v1, int v2)
+{
+	int result;
+	result = v1 % v2;
+	return result;
+}
+#define _CRT_SECURE_NO_WARNINGS
+int main()
+{
+	int v1, v2;
+	int result;
+	result = 0;
+	char ch;
+	printf("식을 뛰어쓴 형식으로 쓰시오.(예:3 5 *):");
+	scanf_s("%d %d %c", &v1, &v2,&ch,1);
+	switch (ch)
+	{
+	case '+':
+		result = plus(v1, v2);
+		break;
+	case '-':
+		result = minus(v1, v2);
+		break;
+	case '*':
+		result = multiplication(v1, v2);
+		break;
+	case '/':
+		result = division(v1, v2);
+		break;
+	case '%':
+		result = rest(v1, v2);
+		break;
+	default:
+		printf("error");
+		break;
+	}
+	printf("\n %d", result);
+	return 0;
+}
